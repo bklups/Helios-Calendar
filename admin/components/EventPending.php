@@ -73,7 +73,7 @@
 					<div style="width:10%;">'.$hc_lang_event['Happens'].'</div>
 				</li>';
 				while($row = mysql_fetch_row($resultI)){
-					$sinceSubmit = daysDiff(date("Y-m-d"), $row[4]) - 1;
+					$sinceSubmit = daysDiff(date("Y-m-d"), $row[4]);
 					$untilHappens = daysDiff($row[2], date("Y-m-d"), 0) - 1;
 					$name = ($row[7] > 0) ? $row[8] : $row[5];
 					$email = ($row[7] > 0) ? $row[9] : $row[6];
@@ -95,7 +95,7 @@
 			}
 			if(hasRows($resultS)){
 				while($row = mysql_fetch_row($resultS)){
-					$sinceSubmit = daysDiff(date("Y-m-d"), $row[4]) - 1;
+					$sinceSubmit = daysDiff(date("Y-m-d"), $row[4]);
 					$untilHappens = daysDiff($row[2], date("Y-m-d"), 0) - 1;
 					$name = ($row[7] > 0) ? $row[8] : $row[5];
 					$email = ($row[7] > 0) ? $row[9] : $row[6];
