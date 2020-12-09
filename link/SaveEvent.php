@@ -38,10 +38,10 @@
 				} else {
 					$link .= "&details=" . urlencode(htmlspecialchars(strip_tags(cOut(hc_mysql_result($result,0,8)))));
 				}
-				if(hc_mysql_result($result,0,35) == 0 || hc_mysql_result($result,0,35) == ''){
+				if(hc_mysql_result($result,0,33) == 0 || hc_mysql_result($result,0,33) == ''){
 					$link .= "&location=" . urlencode(hc_mysql_result($result,0,3) . " " . hc_mysql_result($result,0,4) . " " . hc_mysql_result($result,0,5) . " " . hc_mysql_result($result,0,6) . " " . hc_mysql_result($result,0,37) . " " . hc_mysql_result($result,0,7));
 				} else {
-					$result = doQuery("SELECT * FROM " . HC_TblPrefix . "locations WHERE PkID = '" . cIn(hc_mysql_result($result,0,35)) . "'");
+					$result = doQuery("SELECT * FROM " . HC_TblPrefix . "locations WHERE PkID = '" . cIn(hc_mysql_result($result,0,33)) . "'");
 					$link .= "&location=" . urlencode(hc_mysql_result($result,0,2) . " " . hc_mysql_result($result,0,3) . " " . hc_mysql_result($result,0,4) . " " . hc_mysql_result($result,0,5) . " " . hc_mysql_result($result,0,6) . " " . hc_mysql_result($result,0,7));
 				}
 				
@@ -65,12 +65,12 @@
 					$link .= "&description=" . urlencode(strip_tags(hc_mysql_result($result,0,8)));
 				}
 				
-				if(hc_mysql_result($result,0,35) == 0 || hc_mysql_result($result,0,35) == ''){
+				if(hc_mysql_result($result,0,33) == 0 || hc_mysql_result($result,0,33) == ''){
 					$link .= "&in_loc=" . urlencode(hc_mysql_result($result,0,2));
 					$link .= "&in_st=" . urlencode(hc_mysql_result($result,0,3) . " " . hc_mysql_result($result,0,4));
 					$link .= "&in_csz=" . urlencode(hc_mysql_result($result,0,5) . ", " . hc_mysql_result($result,0,6) . " " . hc_mysql_result($result,0,37) . " " . hc_mysql_result($result,0,7));
 				} else {
-					$result = doQuery("SELECT * FROM " . HC_TblPrefix . "locations WHERE PkID = '" . cIn(hc_mysql_result($result,0,35)) . "'");
+					$result = doQuery("SELECT * FROM " . HC_TblPrefix . "locations WHERE PkID = '" . cIn(hc_mysql_result($result,0,33)) . "'");
 					$link .= "&in_loc=" . urlencode(hc_mysql_result($result,0,1));
 					$link .= "&in_st=" . urlencode(hc_mysql_result($result,0,2) . " " . hc_mysql_result($result,0,3));
 					$link .= "&in_csz=" . urlencode(hc_mysql_result($result,0,4) . ", " . hc_mysql_result($result,0,5) . " " . hc_mysql_result($result,0,6) . " " . hc_mysql_result($result,0,7));
@@ -199,10 +199,10 @@
 					$link .= "&description=" . urlencode(htmlspecialchars(strip_tags(cOut(hc_mysql_result($result,0,8)))));
 				}
 			
-				if(hc_mysql_result($result,0,35) == 0 || hc_mysql_result($result,0,35) == ''){
+				if(hc_mysql_result($result,0,33) == 0 || hc_mysql_result($result,0,33) == ''){
 					$link .= "&location=" . urlencode(hc_mysql_result($result,0,3) . " " . hc_mysql_result($result,0,4) . " " . hc_mysql_result($result,0,5) . " " . hc_mysql_result($result,0,6) . " " . hc_mysql_result($result,0,37) . " " . hc_mysql_result($result,0,7));
 				} else {
-					$result = doQuery("SELECT * FROM " . HC_TblPrefix . "locations WHERE PkID = '" . cIn(hc_mysql_result($result,0,35)) . "'");
+					$result = doQuery("SELECT * FROM " . HC_TblPrefix . "locations WHERE PkID = '" . cIn(hc_mysql_result($result,0,33)) . "'");
 					$link .= "&location=" . urlencode(hc_mysql_result($result,0,2) . " " . hc_mysql_result($result,0,3) . " " . hc_mysql_result($result,0,4) . " " . hc_mysql_result($result,0,5) . " " . hc_mysql_result($result,0,6) . " " . hc_mysql_result($result,0,7));
 				}
 				
